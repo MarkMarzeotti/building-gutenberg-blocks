@@ -11,6 +11,7 @@ import './editor.scss';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
+const { RichText } = wp.editor;
 
 /**
  * Register: aa Gutenberg Block.
@@ -30,6 +31,13 @@ registerBlockType( 'cgb/block-building-gutenberg-blocks', {
 	title: __( 'building-gutenberg-blocks - CGB Block' ), // Block title.
 	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	attributes: {
+		heading: {
+			source: 'children',
+			selector: 'h2',
+			type: 'array',
+		},
+	},
 	keywords: [
 		__( 'building-gutenberg-blocks — CGB Block' ),
 		__( 'CGB Example' ),
@@ -48,6 +56,13 @@ registerBlockType( 'cgb/block-building-gutenberg-blocks', {
 		// Creates a <p class='wp-block-cgb-block-building-gutenberg-blocks'></p>.
 		return (
 			<div className={ props.className }>
+				<RichText
+					tagName="h2"
+					value={ props.attributes.heading }
+					onChange={ ( heading ) => props.setAttributes( { heading } ) }
+					placeholder="Write your heading"
+					keepPlaceholderOnFocus={ true }
+				/>
 				<p>— Hello from the backend.</p>
 				<p>
 					CGB BLOCK: <code>building-gutenberg-blocks</code> is a new Gutenberg block
@@ -75,6 +90,7 @@ registerBlockType( 'cgb/block-building-gutenberg-blocks', {
 	save: function( props ) {
 		return (
 			<div>
+				<RichText.Content tagName="h2" value={ props.attributes.heading } />
 				<p>— Hello from the frontend.</p>
 				<p>
 					CGB BLOCK: <code>building-gutenberg-blocks</code> is a new Gutenberg block.
