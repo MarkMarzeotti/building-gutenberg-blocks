@@ -63,12 +63,12 @@ We can now use the `<RichText>` component in our edit and save functions.
 You'll notice all the calls to `props.attributes.heading`. That's the attribute we defined in step 3.
 
 6. Finally add the `<RichText>` component's data to the save function. 
-```javascript
-<RichText.Content 
-    tagName="h2" 
-    value={ props.attributes.heading } 
-/>
-```
-Ideally you'll want it in the same place you put it in the edit function. The idea here is the end user getting a good idea of what the block will look like on the front end.
+    ```javascript
+    <RichText.Content 
+        tagName="h2" 
+        value={ props.attributes.heading } 
+    />
+    ```
+    Ideally you'll want it in the same place you put it in the edit function. The idea here is the end user getting a good idea of what the block will look like on the front end.
 
 7. Save your work. Webpack should still be running in Terminal and has been watching your files for changes. Take a look at your block in the WordPress Admin. It should now have your placeholder displayed in an editable area. Enter a heading, update your page, and checkout your post on the front end.
