@@ -33,34 +33,34 @@ We will be using a component called `<RichText>`. There are a lot of built in co
 2. In your favorite code editor, open the file controlling our block. It is located at `my-block/src/block/block.js` where `my-block` is the name of your block.
 
 3. We are going to give our block an editable heading. In order to do that, we will need to add a few lines to our block. First we'll let the block know we will be saving some data, and a little info on where that data will be. Add the following lines between `category` and `keywords`.
-```javascript
-attributes: {
-    heading: {
-        source: 'children',
-        selector: 'h2',
-        type: 'array',
+    ```javascript
+    attributes: {
+        heading: {
+            source: 'children',
+            selector: 'h2',
+            type: 'array',
+        },
     },
-},
-```
-This tells our block that we will have 1 attribute, and that it will be found inside the H2 tag.
+    ```
+    This tells our block that we will have 1 attribute, and that it will be found inside the H2 tag.
 
 4. We need to import the `<RichText>` component to use it in our block. Add the following after `const { registerBlockType } = wp.blocks;` in block.js.
-```javascript
-const { RichText } = wp.editor;
-```
-We can now use the `<RichText>` component in our edit and save functions.
+    ```javascript
+    const { RichText } = wp.editor;
+    ```
+    We can now use the `<RichText>` component in our edit and save functions.
 
 5. Add the `<RichText>` component to the edit function. I did it right inside the opening div.
-```javascript
-<RichText
-    tagName="h2"
-    value={ props.attributes.heading }
-    onChange={ ( heading ) => props.setAttributes( { heading } ) }
-    placeholder="Write your heading"
-    keepPlaceholderOnFocus={ true }
-/>
-```
-You'll notice all the calls to `props.attributes.heading`. That's the attribute we defined in step 3.
+    ```javascript
+    <RichText
+        tagName="h2"
+        value={ props.attributes.heading }
+        onChange={ ( heading ) => props.setAttributes( { heading } ) }
+        placeholder="Write your heading"
+        keepPlaceholderOnFocus={ true }
+    />
+    ```
+    You'll notice all the calls to `props.attributes.heading`. That's the attribute we defined in step 3.
 
 6. Finally add the `<RichText>` component's data to the save function. 
     ```javascript
