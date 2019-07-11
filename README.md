@@ -2,7 +2,7 @@
 
 This repo contains various code examples to be used in my talk about building Gutenberg blocks.
 
-## Stage 1
+## Stage 1 - Setup
 
 ### Local WordPress Install
 
