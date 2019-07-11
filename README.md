@@ -1,25 +1,23 @@
-This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
+# Building Gutenberg Blocks
 
-Below you will find some information on how to run scripts.
+This repo contains various code examples to be used in my talk about building Gutenberg blocks.
 
->You can find the most recent version of this guide [here](https://github.com/ahmadawais/create-guten-block).
+## Stage 1
 
-## 👉  `npm start`
-- Use to compile and run the block in development mode.
-- Watches for any changes and reports back any errors in your code.
+### Local WordPress Install
 
-## 👉  `npm run build`
-- Use to build production code for your block inside `dist` folder.
-- Runs once and reports back the gzip file sizes of the produced code.
+In order to get started, we should have a fresh, local install of WordPress. If you have never used a local environment, I recommend [Local By Flywheel](https://localbyflywheel.com/). It is free to use and configures everything for you.
 
-## 👉  `npm run eject`
-- Use to eject your plugin out of `create-guten-block`.
-- Provides all the configurations so you can customize the project as you want.
-- It's a one-way street, `eject` and you have to maintain everything yourself.
-- You don't normally have to `eject` a project because by ejecting you lose the connection with `create-guten-block` and from there onwards you have to update and maintain all the dependencies on your own.
+### Node.js Installed
 
----
+You will need [Node.js](https://nodejs.org/en/download/) to run [create-guten-block](https://github.com/ahmadawais/create-guten-block), the package that will set up our block building environment for us. If you do not have [Node.js](https://nodejs.org/en/download/) installed, you can download it [here](https://nodejs.org/en/download/).
 
-###### Feel free to tweet and say 👋 at me [@MrAhmadAwais](https://twitter.com/mrahmadawais/)
+### Create a Gutenberg block
 
-[![npm](https://img.shields.io/npm/v/create-guten-block.svg?style=flat-square)](https://www.npmjs.com/package/create-guten-block) [![npm](https://img.shields.io/npm/dt/create-guten-block.svg?style=flat-square&label=downloads)](https://www.npmjs.com/package/create-guten-block)  [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/ahmadawais/create-guten-block) [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/create-guten-block.svg?style=social&label=Stars)](https://github.com/ahmadawais/create-guten-block/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)
+With a fresh install of WordPress and Node.js running on our machine the only thing left to do is create our Gutenberg block plugin! 
+
+1. Navigate to your plugins folder in terminal. (You can open Terminal, then drag your plugins folder from a Finder window into your Terminal window to do this quickly)
+
+2. Run `npx create-guten-block my-block` where `my-block` is the name of your block.
+
+3. Log into your local WordPress install, activate your newly created plugin on the Plugins screen, and add your block to a page!
