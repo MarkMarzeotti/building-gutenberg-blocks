@@ -26,7 +26,7 @@ With a fresh install of WordPress and Node.js running on our machine the only th
 
 Our block is working, but its static. It doesn't do anything yet, but with a few modifications, we can give it an editable heading.
 
-We will be using a component called `<RichText>`. There are a lot of built in components we can use in our blocks. You can check them all out [here](https://wp-storybook.netlify.com/). Or you can write your own. Theyre just React components. 
+We will be using a component called `<RichText>`. There are a lot of built in components we can use in our blocks. You can check them all out [here](https://wp-storybook.netlify.com/). Or you can write your own. They're just React components. 
 
 1. In order to see any changes to our block we need to begin compiling our changes. In terminal run `npm start` to use Webpack to compile changes to our block.
 
