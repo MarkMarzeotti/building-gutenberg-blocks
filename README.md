@@ -109,3 +109,5 @@ For this example lets make a simple dropdown that has a heading that is immediat
 6. Now we have a block that lets us add a heading and add some blocks to a content area below the heading. We can add some basic styling to make it look more like a dropdown and hide the content by default on the front end. For this project I will only focus on hiding the content on the front end. In the `style.scss` file for this block I have set the content to `display: none`. In the `editor.scss` file I have overidden that style and set the content to `display: block` so it is easily editable.
 
 7. The last thing we would want to do is add the JavaScript that would show or hide the content on click. You can do that however you like but in the interest of keeping all functionality contained in the plugin, I recommend enqueueing a JavaScript file that handles the toggle inside the plugin the same way you might in a theme.
+
+And just like that we have a Dropdown Gutenberg block!
