@@ -21,3 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Block Initializer.
  */
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+
+function building_gutenberg_blocks_cgb_front_end_scripts() {
+    wp_enqueue_script( 
+		'building_gutenberg_blocks_dropdown_front_end_script', 
+		plugins_url( '/building-gutenberg-blocks/src/dropdown/front-end.js', dirname( __FILE__ ) ), 
+		array( 'jquery' ), 
+		null, 
+		true 
+	);
+}
+add_action( 'init', 'building_gutenberg_blocks_cgb_front_end_scripts' );
