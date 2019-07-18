@@ -27,5 +27,12 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-cgb-dropdown .dropdown-content {
-  display: none; }
+.wp-block-cgb-dropdown {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px; }
+  .wp-block-cgb-dropdown h2::before {
+    content: none !important; }
+  .wp-block-cgb-dropdown .dropdown-content {
+    border-top: 2px solid #000000;
+    display: none; }

@@ -5,8 +5,16 @@
  */
 
 .wp-block-cgb-dropdown  {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+
+  h2::before {
+    content: none !important;
+  }
 
   .dropdown-content {
+    border-top: 2px solid #000000;
     display: none;
   }
 }
